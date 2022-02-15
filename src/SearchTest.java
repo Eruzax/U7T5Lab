@@ -8,42 +8,42 @@ public class SearchTest {
 
         // TEST PART A
         // write test code to search numArray for 38 and print result; should print 3
-
+        Search search = new Search();
+        System.out.println(search.linearSearch(numArray, 38));
         // write test code to search numArray for 9 and print result; should print 2
-
+        System.out.println(search.linearSearch(numArray, 9));
         // write test code to search numArray for 5 and print result; should print -1
-
+        System.out.println(search.linearSearch(numArray, 5));
 
         // TEST PART B
         // use the same numArray and test the same three values as above, in the
         // same order, printing each result:  should print true, true, false
-
-
-
+        System.out.println(search.linearSearch2(numArray, 38));
+        System.out.println(search.linearSearch2(numArray, 9));
+        System.out.println(search.linearSearch2(numArray, 5));
 
         // TEST PARTS C & D -- UNCOMMENT TEST CODE
-        /*
+
         ArrayList<Integer> numArrayList = new ArrayList<Integer>(Arrays.asList(3, -2, 9, 38, -23, 9, 100));
         System.out.println("Tests of linear search Integer ArrayList:");
-        System.out.println(Search.linearSearch(numArrayList, 3));
-        System.out.println(Search.linearSearch(numArrayList, 9));
-        System.out.println(Search.linearSearch(numArrayList, -23));
-        System.out.println(Search.linearSearch(numArrayList, 99));
+        System.out.println(Search.linearSearch3(numArrayList, 3));
+        System.out.println(Search.linearSearch3(numArrayList, 9));
+        System.out.println(Search.linearSearch3(numArrayList, -23));
+        System.out.println(Search.linearSearch3(numArrayList, 99));
 
         System.out.println("Tests of linear search String array:");
         String[] arr1 = {"blue", "red", "purple", "green", "purple"};
-        System.out.println(Search.linearSearch(arr1, "purple"));
-        System.out.println(Search.linearSearch(arr1, "pink"));
-         */
+        System.out.println(Search.linearSearch4(arr1, "purple"));
+        System.out.println(Search.linearSearch4(arr1, "pink"));
 
         // TEST PART E -- UNCOMMENT TEST CODE
-        /*
+
         int[] numArray2 = {5, 1, 5, 4, 7, 5, 2, 5, 8, 8, 5, 10, 5};
         System.out.println(Search.linearSearchLast(numArray2, 4));
         System.out.println(Search.linearSearchLast(numArray2, 8));
         System.out.println(Search.linearSearchLast(numArray2, 5));
         System.out.println(Search.linearSearchLast(numArray2, 9));
-         */
+
 
         // TEST PART F -- UNCOMMENT TEST CODE
         /*
