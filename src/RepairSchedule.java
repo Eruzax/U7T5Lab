@@ -13,7 +13,8 @@ public class RepairSchedule
      */
     public RepairSchedule(int n)
     {
-        /* to be implemented in part (a) */
+        schedule = new ArrayList<CarRepair>();
+        numberOfMechanics = n;
 
     }
 
@@ -27,9 +28,17 @@ public class RepairSchedule
      */
     public boolean addRepair(int m, int b)
     {
-        /* to be implemented in part (b) */
+        for (CarRepair repair : schedule)
+        {
+            if (repair.getMechanicNum() == m || repair.getBayNum() == b)
+            {
+                return false;
+            }
+        }
+        CarRepair newRepair = new CarRepair(m, b);
+        schedule.add(newRepair);
 
-        return false; // STUB VALUE
+        return true; // STUB VALUE
     }
 
     /** Returns an ArrayList containing the mechanic identifiers of all available mechanics,
@@ -37,9 +46,23 @@ public class RepairSchedule
      */
     public ArrayList<Integer> availableMechanics()
     {
-        /* to be implemented in part (c) */
-
-        return null; // STUB VALUE
+        ArrayList<Integer> availableList = new ArrayList<>();
+        for (int i = 0; i < numberOfMechanics; i++)
+        {
+            int count = 0;
+            for (CarRepair c : schedule)
+            {
+                if (c.getMechanicNum() == i)
+                {
+                    count++;
+                }
+                if (count == 0)
+                {
+                    availableList.add(i);
+                }
+            }
+        }
+        return availableList;
     }
 
     /** Removes an element from schedule when a repair is complete. */
